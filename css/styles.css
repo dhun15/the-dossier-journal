@@ -1,0 +1,990 @@
+
+/* ==========================================
+   THE DOSSIER JOURNAL
+   Main Stylesheet
+   ========================================== */
+
+
+/* 1. DESIGN VARIABLES */
+
+:root {
+
+    --paper: #f5f1e8;
+    --paper-deep: #eee8dc;
+
+    --ink: #202a35;
+    --navy: #172b40;
+    --burgundy: #792f3b;
+
+    --muted: #77756f;
+    --line: #cfc8bb;
+
+    --serif: "Libre Baskerville", Georgia, serif;
+    --display: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+
+}
+
+
+/* 2. GENERAL RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background-color: var(--paper);
+
+    color: var(--ink);
+
+    font-family: var(--serif);
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* 3. TOP INFORMATION BAR */
+
+.topline {
+
+    min-height: 34px;
+
+    padding: 10px 6.5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--muted);
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+/* 4. MAGAZINE MASTHEAD */
+
+.masthead {
+
+    padding: 32px 6.5% 27px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+}
+
+.wordmark {
+
+    color: var(--navy);
+
+    font-family: var(--display);
+
+    font-size: clamp(38px, 7vw, 78px);
+
+    font-weight: 700;
+
+    line-height: 0.83;
+
+    letter-spacing: -3.5px;
+
+}
+
+.wordmark span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--burgundy);
+
+    font-family: var(--sans);
+
+    font-size: 0.34em;
+
+    font-weight: 600;
+
+    letter-spacing: 8px;
+
+    text-align: right;
+
+}
+
+.masthead-note {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-family: var(--serif);
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    text-align: right;
+
+}
+
+
+/* 5. NAVIGATION BAR */
+
+.main-nav {
+
+    padding: 0 6.5%;
+
+    display: flex;
+
+    gap: clamp(22px, 5vw, 62px);
+
+    align-items: center;
+
+    min-height: 48px;
+
+    border-top: 3px double var(--navy);
+
+    border-bottom: 1px solid var(--navy);
+
+}
+
+.main-nav a {
+
+    padding: 16px 0 14px;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: color 0.2s ease;
+
+}
+
+.main-nav a:hover {
+
+    color: var(--burgundy);
+
+}
+
+
+/* 6. MAIN CONTENT */
+
+main {
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 6.5%;
+
+}
+
+
+/* 7. INTRODUCTION */
+
+.intro {
+
+    padding: 76px 0 72px;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+.eyebrow {
+
+    color: var(--burgundy);
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.intro h1 {
+
+    margin: 17px 0 14px;
+
+    color: var(--navy);
+
+    font-family: var(--display);
+
+    font-size: clamp(38px, 6vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.7px;
+
+}
+
+.intro h1 em {
+
+    color: var(--burgundy);
+
+    font-weight: 500;
+
+}
+
+.intro-copy {
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    color: #62615d;
+
+    font-family: var(--sans);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* 8. SECTION HEADINGS */
+
+.latest-section,
+.archive-section,
+.about-section {
+
+    padding: 55px 0 60px;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: var(--burgundy);
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.rule {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: var(--line);
+
+}
+
+
+/* 9. FEATURED MAGAZINE ISSUE */
+
+.featured-grid {
+
+    display: grid;
+
+    grid-template-columns: minmax(220px, 36%) 1fr;
+
+    gap: clamp(35px, 8vw, 105px);
+
+    align-items: center;
+
+    padding: 38px 8% 0;
+
+}
+
+
+/* Default cover before an issue is published */
+
+.cover-placeholder {
+
+    min-height: 370px;
+
+    max-width: 270px;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 27px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: var(--navy);
+
+    color: var(--paper);
+
+    border: 8px solid #e4ddcf;
+
+    outline: 1px solid var(--navy);
+
+    box-shadow: 10px 12px 24px #25252518;
+
+    font-family: var(--display);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: 2px;
+
+}
+
+.cover-placeholder small {
+
+    color: #d9c7a8;
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* Actual magazine cover */
+
+.featured-cover {
+
+    width: 100%;
+
+    max-width: 270px;
+
+    max-height: 390px;
+
+    object-fit: cover;
+
+    margin: auto;
+
+    display: block;
+
+    box-shadow: 10px 12px 24px #25252518;
+
+}
+
+
+/* Featured issue text */
+
+.featured-copy h2 {
+
+    margin: 13px 0 17px;
+
+    color: var(--navy);
+
+    font-family: var(--display);
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+}
+
+.featured-copy p:not(.eyebrow) {
+
+    max-width: 470px;
+
+    color: #66635d;
+
+    font-family: var(--sans);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* Editorial links */
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: var(--burgundy);
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+}
+
+.text-link:hover {
+
+    color: var(--navy);
+
+}
+
+
+/* 10. MAGAZINE ARCHIVE */
+
+.archive-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 34px;
+
+    padding-top: 32px;
+
+}
+
+.archive-card {
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease;
+
+}
+
+.archive-card img {
+
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+
+    background: var(--paper-deep);
+
+    border: 1px solid var(--line);
+
+    transition: transform 0.25s ease;
+
+}
+
+.archive-card:hover img {
+
+    transform: translateY(-4px);
+
+}
+
+.archive-card h3 {
+
+    margin: 15px 0 6px;
+
+    color: var(--navy);
+
+    font-family: var(--display);
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+}
+
+.archive-card p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* Empty archive message */
+
+.empty-state {
+
+    grid-column: 1 / -1;
+
+    padding: 28px;
+
+    border: 1px dashed var(--line);
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-family: var(--sans);
+
+    font-size: 12px;
+
+}
+
+
+/* 11. DIGITAL PDF READER */
+
+.reader-section {
+
+    padding: 45px 0 60px;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+.reader-toolbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    color: var(--muted);
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+.quiet-button {
+
+    padding: 0;
+
+    border: 0;
+
+    background: none;
+
+    color: var(--burgundy);
+
+    cursor: pointer;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.quiet-button:hover {
+
+    color: var(--navy);
+
+}
+
+.reader-stage {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+.page-wrap {
+
+    width: min(700px, 78%);
+
+    min-height: 240px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px;
+
+    background: #e8e1d5;
+
+    box-shadow: 0 5px 24px #1c26301c;
+
+}
+
+#pdf-canvas {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+    background: white;
+
+}
+
+.page-arrow {
+
+    border: 0;
+
+    background: none;
+
+    color: var(--burgundy);
+
+    cursor: pointer;
+
+    font-family: var(--serif);
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+}
+
+.page-arrow:hover {
+
+    color: var(--navy);
+
+}
+
+.page-arrow:disabled {
+
+    opacity: 0.25;
+
+    cursor: default;
+
+}
+
+.reader-hint {
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+}
+
+
+/* 12. ABOUT SECTION */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    padding: 35px 8% 0;
+
+}
+
+.about-grid h2 {
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: var(--display);
+
+    font-size: clamp(30px, 4vw, 43px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+}
+
+.about-grid h2 em {
+
+    color: var(--burgundy);
+
+    font-weight: 500;
+
+}
+
+.about-grid p {
+
+    margin: 0 0 17px;
+
+    color: #625f59;
+
+    font-family: var(--sans);
+
+    font-size: 13px;
+
+    line-height: 2;
+
+}
+
+.about-grid .about-signoff {
+
+    margin-top: 24px;
+
+    color: var(--burgundy);
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* 13. FOOTER */
+
+.site-footer {
+
+    padding: 27px 6.5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: var(--muted);
+
+    font-family: var(--sans);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+
+}
+
+.footer-wordmark {
+
+    color: var(--navy);
+
+    font-family: var(--display);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* 14. TABLET AND MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    .topline {
+
+        font-size: 7px;
+
+        letter-spacing: 0.8px;
+
+    }
+
+    .masthead {
+
+        padding-top: 25px;
+
+        align-items: flex-start;
+
+    }
+
+    .wordmark {
+
+        letter-spacing: -2px;
+
+    }
+
+    .masthead-note {
+
+        font-size: 9px;
+
+    }
+
+    .main-nav {
+
+        justify-content: space-between;
+
+        gap: 10px;
+
+    }
+
+    .main-nav a {
+
+        font-size: 8px;
+
+        letter-spacing: 0.7px;
+
+    }
+
+    .intro {
+
+        padding: 55px 0;
+
+    }
+
+    .featured-grid {
+
+        grid-template-columns: 1fr;
+
+        padding: 30px 3% 0;
+
+        gap: 28px;
+
+    }
+
+    .featured-copy {
+
+        text-align: center;
+
+    }
+
+    .featured-copy p:not(.eyebrow) {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .archive-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 22px;
+
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding-left: 3%;
+
+        padding-right: 3%;
+
+    }
+
+    .site-footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .reader-stage {
+
+        gap: 5px;
+
+    }
+
+    .page-wrap {
+
+        width: 82%;
+
+        padding: 5px;
+
+    }
+
+    .page-arrow {
+
+        font-size: 34px;
+
+    }
+
+}
+
+
+/* 15. ACCESSIBILITY AND INTERACTION */
+
+button:focus-visible,
+a:focus-visible,
+.archive-card:focus-visible {
+
+    outline: 2px solid var(--burgundy);
+
+    outline-offset: 4px;
+
+}
+
+[hidden] {
+
+    display: none !important;
+
+}
